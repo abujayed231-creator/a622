@@ -1,7 +1,12 @@
+
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
+  basePath: "/a622",
+
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
@@ -9,6 +14,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+
   turbopack: {
     root: __dirname,
   },
